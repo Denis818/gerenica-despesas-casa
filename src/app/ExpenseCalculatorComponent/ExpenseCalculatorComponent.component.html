@@ -1,0 +1,43 @@
+<div class="expense-calculator">
+  <mat-card>
+    <mat-card-title>Calculadora de Despesas</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="calculateExpenses()">
+        <mat-form-field appearance="fill">
+          <mat-label>Parcela do Apartamento</mat-label>
+          <input matInput type="number" [(ngModel)]="apartmentInstallment" name="apartmentInstallment">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Parcela da Caixa</mat-label>
+          <input matInput type="number" [(ngModel)]="bankInstallment" name="bankInstallment">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Conta de Luz</mat-label>
+          <input matInput type="number" [(ngModel)]="electricityBill" name="electricityBill">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Condomínio</mat-label>
+          <input matInput type="number" [(ngModel)]="condominiumFee" name="condominiumFee">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Calcular</button>
+      </form>
+    </mat-card-content>
+    <mat-card-actions *ngIf="formattedResults ">
+      <div class="results">
+        <!-- Estruture a exibição dos resultados de forma elegante aqui -->
+        <div *ngIf="formattedResults" class="results-display">
+          <mat-card>
+            <mat-card-content>
+              <!-- Exibir resultados formatados -->
+              <pre>{{ formattedResults }}</pre>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

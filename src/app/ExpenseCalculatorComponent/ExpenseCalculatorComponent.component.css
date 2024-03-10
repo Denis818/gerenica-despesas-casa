@@ -1,0 +1,90 @@
+/* Estilos gerais do formulário */
+.expense-calculator {
+	display: flex;
+	flex-direction: column;
+	max-width: 700px;
+	margin: 2rem auto;
+	padding: 1rem;
+	background-color: white;
+}
+
+/* Estilo do título */
+mat-card-title {
+	font-size: 1.8rem;
+	text-align: center;
+	color: #333;
+	margin-bottom: 2rem;
+}
+
+/* Estilo dos campos de entrada */
+mat-form-field {
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+/* Aumentar o tamanho dos inputs */
+input.mat-input-element {
+	padding: 1rem;
+	font-size: 1rem;
+	border: 1px solid #e0e0e0; /* borda mais sutil */
+	border-radius: 4px; /* cantos levemente arredondados para suavidade */
+}
+
+/* Botão de Calcular com estilo mais chamativo */
+button.mat-raised-button {
+	margin-top: 2rem;
+	padding: 1rem;
+	font-size: 1rem;
+	border-radius: 4px;
+	color: white;
+	background-color: #673ab7;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+}
+
+button.mat-raised-button:hover {
+	background-color: #5e35b1;
+}
+
+/* Estilo para os resultados */
+.results-display {
+	margin-top: 2rem;
+	padding: 1rem;
+	background-color: #f7f7f7;
+	border-radius: 4px; /* Cantos arredondados */
+	border: 1px solid #e0e0e0; /* borda sutil */
+}
+
+/* Pequenos ajustes para melhorar a legibilidade */
+mat-card-content {
+	font-size: 1rem;
+	color: #555;
+	background-color: #ffffff; /* fundo branco para o conteúdo do card */
+	border: none; /* removendo bordas do card */
+	box-shadow: none; /* sem sombras */
+}
+
+/* Remover as bordas internas e sombras dos cards */
+mat-card {
+	border: none;
+	box-shadow: none;
+	background: none; /* fundo transparente */
+	margin-bottom: 1rem;
+}
+
+/* Ajusta a largura dos campos de input para ficarem dois em uma linha */
+@media (min-width: 768px) {
+	.form-group {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	mat-form-field {
+		width: calc(50% - 10px); /* Subtrai o dobro da margem desejada */
+	}
+
+	/* Adiciona margem à direita do primeiro campo de input */
+	mat-form-field {
+		margin-right: 10px;
+	}
+}
